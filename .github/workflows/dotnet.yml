@@ -41,8 +41,8 @@ jobs:
     - uses: qase-tms/qase-link-run@main
       env: 
        QASE_API_TOKEN: ${{ env.QASE_API_TOKEN }}
-    - name: Appium Server Action
-      uses: moatazeldebsy/Appium-Server-GitHub-Action@V1.0.7
+    - name: Checkout
+      uses: actions/checkout@v2
 
     - uses: actions/checkout@v3
     - name: Setup .NET
