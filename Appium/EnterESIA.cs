@@ -42,7 +42,7 @@ namespace AppiumTest
             driverOption.AddAdditionalCapability(MobileCapabilityType.PlatformName, "Android");
             driverOption.AddAdditionalCapability(MobileCapabilityType.DeviceName, /*"4  WVGA (Nexus S)"*/"Pixel 2");
            // _driver = new AndroidDriver<AndroidElement>(new Uri("http://localhost:4723/wd/hub"), driverOption);
-            _driver = new RemoteWebDriver(new Uri("http://localhost:4723/wd/hub"), driverOption);
+            _driver = new RemoteWebDriver(new Uri("http://localhost:4724/wd/hub"), driverOption);
         }
 
         [Test]
