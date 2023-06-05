@@ -34,7 +34,7 @@ env:
 jobs:
   build:
 
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: qase-tms/qase-link-run@main
