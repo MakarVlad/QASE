@@ -9,6 +9,7 @@ using System.Threading;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Net.Http.Headers;
+using OpenQA.Selenium;
 
 namespace AppiumTest
 {
@@ -18,6 +19,7 @@ namespace AppiumTest
     public class EnterESIA
     {
         private AppiumDriver<AndroidElement> _driver;
+         
         string mainEsiaButtonXpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.widget.ScrollView/android.view.View[1]/android.view.View/android.widget.Button\r\n";
         string checkBoxPolicyXpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.CheckBox[1]\r\n";
         string checkBoxMinCifraXpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.CheckBox[2]\r\n";
@@ -37,7 +39,8 @@ namespace AppiumTest
             var driverOption = new AppiumOptions();
             driverOption.AddAdditionalCapability(MobileCapabilityType.PlatformName, "Android");
             driverOption.AddAdditionalCapability(MobileCapabilityType.DeviceName, /*"4  WVGA (Nexus S)"*/"Pixel 2");
-            _driver = new AndroidDriver<AndroidElement>(new Uri("http://127.0.0.1:4723/wd/hub"), driverOption);
+            _driver = new AndroidDriver<AndroidElement>(new Uri("http://localhost:4723/wd/hub"), driverOption);
+         
         }
 
         [Test]
