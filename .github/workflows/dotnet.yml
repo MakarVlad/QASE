@@ -41,8 +41,11 @@ jobs:
     - uses: qase-tms/qase-link-run@main
       env: 
        QASE_API_TOKEN: ${{ env.QASE_API_TOKEN }}
-    - name: Checkout
-      uses: actions/checkout@v2
+    - name: setup appium
+      run: |
+        npm install -g appium@v1.15.1
+        appium -v
+        appium &>/dev/null &
 
     - uses: actions/checkout@v3
     - name: Setup .NET
