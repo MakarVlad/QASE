@@ -1,7 +1,7 @@
 using NUnit.Framework.Constraints;
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Android;
-using OpenQA.Selenium.Appium.Android.UiAutomator;
+//using OpenQA.Selenium.Appium.Android.UiAutomator;
 using OpenQA.Selenium.Appium.Enums;
 using OpenQA.Selenium.Appium.Interfaces;
 using OpenQA.Selenium.Appium.MultiTouch;
