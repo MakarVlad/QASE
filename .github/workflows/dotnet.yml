@@ -35,7 +35,7 @@ jobs:
 
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
     - uses: qase-tms/qase-link-run@main
@@ -46,8 +46,12 @@ jobs:
         npm install -g appium@v1.15.1
         appium -v
         appium &>/dev/null &
+        
     - name: run appium android
       uses: reactivecircus/android-emulator-runner@v2
+      with: 
+        api-level: 29
+        script: mvn clean test -Pandroid
 
     - uses: actions/checkout@v3
     - name: Setup .NET
