@@ -19,7 +19,7 @@ jobs:
     steps:
     - uses: qase-tms/qase-link-run@main
       env: 
-       QASE_API_TOKEN: ${{ env.QASE_API_TOKEN }}
+       QASE_TOKEN: ${{ env.QASE_TOKEN }}
  
     - uses: actions/checkout@v3
     - name: Setup .NET
