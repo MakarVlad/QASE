@@ -65,5 +65,6 @@ jobs:
       uses: reactivecircus/android-emulator-runner@v2
       with:
           api-level: 29
-          script: ./EnterESIA.cs
-        
+          script: mvn clean test -Pandroid
+    - name: Test
+      run: dotnet test -v n 
