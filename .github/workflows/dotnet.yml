@@ -63,7 +63,7 @@ jobs:
          distribution: 'temurin'
          java-version: '11'
     - name: run appium android tests
-      uses: reactivecircus/android-emulator-runner@v2
+    - uses: reactivecircus/android-emulator-runner@v2
       with:
           api-level: 29
           script: ./gradlew connectedCheck
