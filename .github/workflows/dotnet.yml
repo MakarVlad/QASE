@@ -45,6 +45,9 @@ jobs:
         npm install -g appium@v1.15.1
         appium -v
         appium &>/dev/null &
+    - name: Android Emulator (faruktoptas)
+      uses: faruktoptas/android-github-actions-emulator@1.1.0
+
     - uses: actions/checkout@v3
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
