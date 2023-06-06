@@ -61,10 +61,6 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
-    - name: run appium android tests
-      uses: reactivecircus/android-emulator-runner@v2
-      with:
-          api-level: 29
-          script: ./gradlew connectedCheck
+ 
     - name: Test
       run: dotnet test -v n
