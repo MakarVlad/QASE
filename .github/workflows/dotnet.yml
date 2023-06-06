@@ -62,7 +62,7 @@ jobs:
       with:
          distribution: 'temurin'
          java-version: '11'
-    - name: run emulator
+    - name: run appium android tests
       uses: reactivecircus/android-emulator-runner@v2
       with:
           api-level: 29
