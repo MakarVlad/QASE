@@ -33,7 +33,8 @@ namespace Appium
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.App, appPath);
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.NewCommandTimeout, 16000);
 
-            driver = new AndroidDriver<AndroidElement>(service, appiumOptions, TimeSpan.FromMinutes(3));
+            driver = new AndroidDriver<AndroidElement>(service, appiumOptions, TimeSpan.FromMinutes(10));
+           // driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromMinutes(3);
             touchAction = new TouchAction(driver);
         }
 
@@ -42,6 +43,6 @@ namespace Appium
         //{
         //    driver.Quit();
         //}
-    }/*new Uri("http://localhost:4723/wd/hub")*/
+    }   //new Uri("http://localhost:4723/wd/hub")
 }
 
