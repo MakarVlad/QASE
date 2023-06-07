@@ -10,7 +10,7 @@ using OpenQA.Selenium.Appium.Enums;
 using OpenQA.Selenium.Appium.iOS;
 using OpenQA.Selenium.Appium.Interfaces;
 using OpenQA.Selenium.Appium.MultiTouch;
-
+using OpenQA.Selenium.Appium.Service;
 
 namespace Appium
 {
@@ -24,15 +24,16 @@ namespace Appium
         public void Init()
         {
             string appPath = Path.Combine(Environment.CurrentDirectory, "MSP_v.1.2.0(344-release).apk");
+            AppiumLocalService service;
             AppiumOptions appiumOptions = new AppiumOptions();
-         
+            service = AppiumLocalService.BuildDefaultService();
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.DeviceName, "Pixel 2");
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.PlatformName, "Android");
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.PlatformVersion, "10.0");
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.App, appPath);
             appiumOptions.AddAdditionalCapability("uiautomator2ServerInstallTimeout",60000);
 
-            driver = new AndroidDriver<AndroidElement>(new Uri("http://localhost:4723/wd/hub"), appiumOptions) ;
+            driver = new AndroidDriver<AndroidElement>(/*new Uri("http://localhost:4723/wd/hub")*/service, appiumOptions) ;
             touchAction = new TouchAction(driver);
         }
 
