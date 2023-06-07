@@ -28,7 +28,7 @@ namespace Appium
          
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.DeviceName, "Pixel 2");
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.PlatformName, "Android");
-            appiumOptions.AddAdditionalCapability(MobileCapabilityType.PlatformVersion, "11.0");
+            appiumOptions.AddAdditionalCapability(MobileCapabilityType.PlatformVersion, "10.0");
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.App, appPath);
             appiumOptions.AddAdditionalCapability("uiautomator2ServerInstallTimeout",60000);
 
