@@ -24,16 +24,16 @@ namespace Appium
         public void Init()
         {
             string appPath = Path.Combine(Environment.CurrentDirectory, "MSP_v.1.2.0(344-release).apk");
-            AppiumLocalService service;
+            AppiumLocalService service = AppiumLocalService.BuildDefaultService(); ;
             AppiumOptions appiumOptions = new AppiumOptions();
-            service = AppiumLocalService.BuildDefaultService();
+      
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.DeviceName, "Pixel 2");
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.PlatformName, "Android");
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.PlatformVersion, "10.0");
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.App, appPath);
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.NewCommandTimeout, 16000);
 
-            driver = new AndroidDriver<AndroidElement>(service, appiumOptions);
+            driver = new AndroidDriver<AndroidElement>(service, appiumOptions, TimeSpan.FromMinutes(3));
             touchAction = new TouchAction(driver);
         }
 
