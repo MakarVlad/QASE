@@ -24,7 +24,7 @@ namespace Appium
         public void Init()
         {
             string appPath = Path.Combine(Environment.CurrentDirectory, "MSP_v.1.2.0.apk");
-            AppiumLocalService service = AppiumLocalService.BuildDefaultService();
+           // AppiumLocalService service = AppiumLocalService.BuildDefaultService();
 
             AppiumOptions appiumOptions = new AppiumOptions();
 
@@ -34,16 +34,11 @@ namespace Appium
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.App, appPath);
             appiumOptions.AddAdditionalCapability("uiautomator2ServerInstallTimeout", 600000);
             appiumOptions.AddAdditionalCapability("androidInstallTimeout", 600000);
-            driver = new AndroidDriver<AndroidElement>(service, appiumOptions, TimeSpan.FromMinutes(10));
+            driver = new AndroidDriver<AndroidElement>(/*service*/new Uri("http://localhost:4723/wd/hub"), appiumOptions, TimeSpan.FromMinutes(5));
             // driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromMinutes(3);
             touchAction = new TouchAction(driver);
         }
 
-        //[TearDown]
-        //public void Cleanup()
-        //{
-        //    driver.Quit();
-        //}
-    }   //new Uri("http://localhost:4723/wd/hub")
+    }  
 }
 

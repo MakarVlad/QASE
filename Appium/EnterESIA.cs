@@ -41,7 +41,7 @@ namespace AppiumTest
         [Test]
         public void EntranceEsiaWithoutCheckbox()
         {
-           
+         
             Thread.Sleep(2000);
             CloseOnboard = driver.FindElementByXPath(closeOnboardXpath);
             CloseOnboard.Click();
