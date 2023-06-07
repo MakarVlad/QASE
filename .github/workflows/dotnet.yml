@@ -66,5 +66,6 @@ jobs:
       uses: reactivecircus/android-emulator-runner@v2
       with:
           api-level: 29
-          script: dotnet test -v n
+          script: adb start-server
+                  dotnet test -v n
 
