@@ -26,7 +26,7 @@ namespace Appium
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.DeviceName, "Pixel 2");
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.PlatformName, "Android");
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.PlatformVersion, "10.0");
-            appiumOptions.AddAdditionalCapability(MobileCapabilityType.App, @"\MSP_v.1.2.0(344-release).apk");
+            appiumOptions.AddAdditionalCapability(MobileCapabilityType.App, @"\Appium\MSP_v.1.2.0(344-release).apk");
             driver = new AndroidDriver<AndroidElement>(new Uri("http://127.0.0.1:4723/wd/hub"), appiumOptions);
 
             touchAction = new TouchAction(driver);
