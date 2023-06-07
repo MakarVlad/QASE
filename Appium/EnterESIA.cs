@@ -41,8 +41,6 @@ namespace AppiumTest
         [Test]
         public void EntranceEsiaWithoutCheckbox()
         {
-         
-            Thread.Sleep(2000);
             CloseOnboard = driver.FindElementByXPath(closeOnboardXpath);
             CloseOnboard.Click();
             Thread.Sleep(500);
@@ -58,18 +56,14 @@ namespace AppiumTest
             touchAction.Tap(363.0, 1572.0);//4
             touchAction.Perform();
        
-            Thread.Sleep(50);
             mainEsiaButton = driver.FindElementByXPath(mainEsiaButtonXpath);
-            Thread.Sleep(50);
             mainEsiaButton.Click();
-            Thread.Sleep(50);
             checkBoxPolicy = driver.FindElementByXPath(checkBoxPolicyXpath);
             checkBoxMinCifra = driver.FindElementByXPath(checkBoxMinCifraXpath);
             enterEsiaButton =  driver.FindElementByXPath(enterEsiaButtonXpath);
             checkBoxPolicy.Click();
-            Thread.Sleep(50);
             enterEsiaButton.Click();
-            Thread.Sleep(50);
+
             try
             {
              var EsiaForm = driver.FindElementByXPath(EsiaFormXpath);

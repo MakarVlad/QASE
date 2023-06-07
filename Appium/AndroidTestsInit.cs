@@ -35,7 +35,7 @@ namespace Appium
             appiumOptions.AddAdditionalCapability("uiautomator2ServerInstallTimeout", 600000);
             appiumOptions.AddAdditionalCapability("androidInstallTimeout", 600000);
             driver = new AndroidDriver<AndroidElement>(/*service*/new Uri("http://localhost:4723/wd/hub"), appiumOptions, TimeSpan.FromMinutes(5));
-            // driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromMinutes(3);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(2);
             touchAction = new TouchAction(driver);
         }
 
