@@ -31,9 +31,9 @@ namespace Appium
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.PlatformName, "Android");
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.PlatformVersion, "10.0");
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.App, appPath);
-            appiumOptions.AddAdditionalCapability("uiautomator2ServerInstallTimeout",60000);
+            appiumOptions.AddAdditionalCapability(MobileCapabilityType.NewCommandTimeout, 16000);
 
-            driver = new AndroidDriver<AndroidElement>(/*new Uri("http://localhost:4723/wd/hub")*/service, appiumOptions) ;
+            driver = new AndroidDriver<AndroidElement>(service, appiumOptions);
             touchAction = new TouchAction(driver);
         }
 
@@ -42,6 +42,6 @@ namespace Appium
         //{
         //    driver.Quit();
         //}
-    }
+    }/*new Uri("http://localhost:4723/wd/hub")*/
 }
 
