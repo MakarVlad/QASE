@@ -64,6 +64,6 @@ jobs:
     - name: appium android tests
       uses: reactivecircus/android-emulator-runner@v2
       with:
-          api-level: 29
+          api-level: 30
           script: dotnet test -v n
 
