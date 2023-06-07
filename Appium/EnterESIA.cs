@@ -19,24 +19,51 @@ namespace AppiumTest
     [TestFixture]
     public class EnterESIA: AndroidTestsInit
     {
-        public EnterESIA() : base() { } 
+        
+        public EnterESIA() : base() { }
+      //  ITouchAction touchAction;
         string mainEsiaButtonXpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.widget.ScrollView/android.view.View[1]/android.view.View/android.widget.Button\r\n";
         string checkBoxPolicyXpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.CheckBox[1]\r\n";
         string checkBoxMinCifraXpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.CheckBox[2]\r\n";
         string enterEsiaButtonXpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ScrollView/android.view.View[1]/android.widget.Button";
         string EsiaFormXpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.ViewGroup";
         string exitXpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View\r\n";
+        string closeOnboardXpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]\r\n";
+        //string test = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View\r\n";
+       // ITouchAction touchAction;
+
+
         AndroidElement? mainEsiaButton;
         AndroidElement? checkBoxPolicy;
         AndroidElement? enterEsiaButton;
         AndroidElement? checkBoxMinCifra;
         AndroidElement? EsiaForm;
         AndroidElement? Exit;
+        AndroidElement? CloseOnboard;
+        AndroidElement? Test ;
         [Test]
         public void EntranceEsiaWithoutCheckbox()
         {
-             //int case_id = 1132;
-            //QaseApi.RunsInfo();
+           
+            Thread.Sleep(2000);
+            CloseOnboard = driver.FindElementByXPath(closeOnboardXpath);
+            CloseOnboard.Click();
+            Thread.Sleep(500);
+            touchAction.Tap(158.0, 740.0);//1
+            touchAction.Perform();
+            Thread.Sleep(150);
+            touchAction.Tap(540.0, 500.0);//2
+            touchAction.Perform();
+            Thread.Sleep(150);
+            touchAction.Tap(542.0, 651.0);//3
+            touchAction.Perform();
+            Thread.Sleep(150);
+            touchAction.Tap(359.0, 1439.0);//4
+            touchAction.Perform();
+          //  Thread.Sleep(150);
+          ////  touchAction.Tap(359, 1439);
+          //  //int case_id = 1132;
+          //  //QaseApi.RunsInfo();
             Thread.Sleep(50);
             mainEsiaButton = driver.FindElementByXPath(mainEsiaButtonXpath);
             Thread.Sleep(50);
