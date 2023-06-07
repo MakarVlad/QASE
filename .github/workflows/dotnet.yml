@@ -42,7 +42,7 @@ jobs:
        QASE_API_TOKEN: ${{ env.QASE_API_TOKEN }}
     - name: setup appium
       run: |
-        npm install -g appium@v1.15.1
+        npm install -g appium@v1.22.1
         appium -v
         appium &>/dev/null &
     - name: setup java
