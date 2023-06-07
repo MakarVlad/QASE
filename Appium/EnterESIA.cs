@@ -21,7 +21,7 @@ namespace AppiumTest
     {
         
         public EnterESIA() : base() { }
-      //  ITouchAction touchAction;
+
         string mainEsiaButtonXpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.widget.ScrollView/android.view.View[1]/android.view.View/android.widget.Button\r\n";
         string checkBoxPolicyXpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.CheckBox[1]\r\n";
         string checkBoxMinCifraXpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.CheckBox[2]\r\n";
@@ -29,9 +29,6 @@ namespace AppiumTest
         string EsiaFormXpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.ViewGroup";
         string exitXpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View\r\n";
         string closeOnboardXpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]\r\n";
-        //string test = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View\r\n";
-       // ITouchAction touchAction;
-
 
         AndroidElement? mainEsiaButton;
         AndroidElement? checkBoxPolicy;
@@ -58,12 +55,9 @@ namespace AppiumTest
             touchAction.Tap(542.0, 651.0);//3
             touchAction.Perform();
             Thread.Sleep(150);
-            touchAction.Tap(359.0, 1439.0);//4
+            touchAction.Tap(363.0, 1572.0);//4
             touchAction.Perform();
-          //  Thread.Sleep(150);
-          ////  touchAction.Tap(359, 1439);
-          //  //int case_id = 1132;
-          //  //QaseApi.RunsInfo();
+       
             Thread.Sleep(50);
             mainEsiaButton = driver.FindElementByXPath(mainEsiaButtonXpath);
             Thread.Sleep(50);
@@ -93,8 +87,6 @@ namespace AppiumTest
                 {
                     Exit = driver.FindElementByXPath(exitXpath);
                     Exit.Click();
-                    //QaseApi.RunCaseResult(case_id, "passed");
-                    //Assert.Pass();
                 }
 
             }
