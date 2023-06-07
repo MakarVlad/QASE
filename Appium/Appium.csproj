@@ -34,7 +34,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="MSP_v.1.2.0%28344-release%29.apk">
+    <None Update="MSP_v.1.2.0.apk">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
