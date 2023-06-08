@@ -29,7 +29,7 @@ namespace AppiumTest
         string EsiaFormXpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.ViewGroup";
         string exitXpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View\r\n";
         string closeOnboardXpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]\r\n";
-
+      
         AndroidElement? mainEsiaButton;
         AndroidElement? checkBoxPolicy;
         AndroidElement? enterEsiaButton;
@@ -53,7 +53,7 @@ namespace AppiumTest
             touchAction.Tap(542.0, 651.0);//3
             touchAction.Perform();
             Thread.Sleep(150);
-            touchAction.Tap(363.0, 1572.0);//4
+            touchAction.Tap(367.0, 1439.0);//4
             touchAction.Perform();
        
             mainEsiaButton = driver.FindElementByXPath(mainEsiaButtonXpath);
