@@ -1,5 +1,6 @@
 ﻿using Appium;
 using AppiumTest;
+using OpenQA.Selenium.Appium.Android;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -150,6 +151,40 @@ namespace Appium.Android
         }
         [Test]
         [Order(4)]
+        public void ActivEntranceWithBiometriaWithoutBiometricData()
+        {
+            case_id = 1158;
+            try
+            {
+                BiometriaWindow = driver.FindElementByXPath(activateBiometriaWindowXpath);
+                ActivBiometriaYesButton = driver.FindElementByXPath(activeBiometriaYesXpath);
+                ActivBiometriaYesButton.Click();
+                AddBiometricDataWindow = driver.FindElementByXPath(addBiometricDataXpath);
+                BiometricDataGoToSettingsNoButton = driver.FindElementByXPath(biometricDataGoToSettingsNoButton);
+                BiometricDataGoToSettingsNoButton.Click();
+                PinCodeKeyboard.OneButton = driver.FindElementByXPath(PinCodeKeyboard.OneXpath);
+                PinCodeKeyboard.OneButton.Click();
+                PinCodeKeyboard.TwoButton = driver.FindElementByXPath(PinCodeKeyboard.TwoXpath);
+                PinCodeKeyboard.TwoButton.Click();
+                PinCodeKeyboard.ThreeButton = driver.FindElementByXPath(PinCodeKeyboard.ThreeXpath);
+                PinCodeKeyboard.ThreeButton.Click();
+                PinCodeKeyboard.FourButton = driver.FindElementByXPath(PinCodeKeyboard.FourXpath);
+                PinCodeKeyboard.FourButton.Click();
+                PinCodeKeyboard.FiveButton = driver.FindElementByXPath(PinCodeKeyboard.FiveXpath);
+                PinCodeKeyboard.FiveButton.Click();
+
+                QaseAPI.RunCaseResult(case_id, "passed", comment);
+            }
+            catch (Exception ex)
+            {
+                QaseAPI.RunCaseResult(case_id, "failed", ex.Message);
+                Assert.Fail(ex.Message);
+            }
+
+
+        }
+        [Test]
+        [Order(5)]
         public void EntranceEsiaWithoutBiometria()
         {
             case_id = 1157;

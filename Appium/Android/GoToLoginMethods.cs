@@ -91,5 +91,43 @@ namespace Appium.Android
             }
 
         }
+        [Test]
+        [Order(3)]
+        public void ResetCheckBoxAndCloseDemoAccess()
+        {
+            case_id = 1161;
+            try
+            {
+                UserIcon = driver.FindElementByXPath(userIconXpath);
+                UserIcon.Click();
+                EnterButtonInSideBar = driver.FindElementByXPath(enterButtonInSideBarXpath);
+                EnterButtonInSideBar.Click();
+                checkBoxPolicy = driver.FindElementByXPath(checkBoxPolicyXpath);
+                checkBoxMinCifra = driver.FindElementByXPath(checkBoxMinCifraXpath);
+
+                checkBoxPolicy.Click();
+                checkBoxMinCifra.Click();
+                DemoAccesButton = driver.FindElementByXPath(demoAccessXpath);
+                DemoAccesButton.Click();
+                Exit = driver.FindElementByXPath(exitXpath);
+                Exit.Click();
+                UserIcon.Click();
+                EnterButtonInSideBar.Click();
+                try
+                {
+                    DemoAccesYandexButton = driver.FindElementByXPath(demoAccessYandexXpath);
+                }
+                catch
+                {
+                  Exit.Click();
+                }
+                mainEsiaButton = driver.FindElementByXPath(mainEsiaButtonXpath);
+            }
+            catch(Exception ex)
+            {
+                QaseAPI.RunCaseResult(case_id, "failed", ex.Message);
+                Assert.Fail(ex.Message);
+            }
+        }
     }
 }
