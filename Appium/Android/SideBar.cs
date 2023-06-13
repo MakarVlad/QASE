@@ -12,7 +12,7 @@ namespace Appium.Android
     internal class SideBar:AndroidTestsInit
     {
         [Test]
-       
+        [Order(0)]
         public void SideBarElementsAfterAuthorization()
         {
             case_id = 1166;
@@ -32,6 +32,23 @@ namespace Appium.Android
                 Assert.Fail(ex.Message);
             }
             
+        }
+        [Test]
+        [Order(1)]
+        public void LinkInPersonalData()
+        {
+            case_id = 1167;
+            try
+            {
+                PersonalDataInSideBar = driver.FindElementByXPath(personalDataBlockInSideBarXpath);
+                PersonalDataInSideBar.Click();
+                BlockWithLinkInPersonalData = driver.FindElementByXPath(blockWithLinkInPersonalDataXpath);
+            }
+            catch(Exception ex) 
+            {
+                QaseAPI.RunCaseResult(case_id, "failed", ex.Message);
+                Assert.Fail(ex.Message);
+            }
         }
 
 
