@@ -26,7 +26,6 @@ namespace Appium.Android
                 mainEsiaButton = driver.FindElementByXPath(mainEsiaButtonXpath);
                 mainEsiaButton.Click();
                 enterEsiaButton = driver.FindElementByXPath(enterEsiaButtonXpath);
-                enterEsiaButton.Click();
                 Exit = driver.FindElementByXPath(exitXpath);
                 Exit.Click();
                
@@ -51,7 +50,6 @@ namespace Appium.Android
                 BellEnterEsiaButton = driver.FindElementByXPath(bellEnterEsiaButtXpath);
                 BellEnterEsiaButton.Click();
                 enterEsiaButton = driver.FindElementByXPath(enterEsiaButtonXpath);
-                enterEsiaButton.Click();
                 Exit = driver.FindElementByXPath(exitXpath);
                 Exit.Click();
                 BellBackButton = driver.FindElementByXPath(notificatBackButtonXpath);
@@ -78,7 +76,6 @@ namespace Appium.Android
                 EnterButtonInSideBar = driver.FindElementByXPath(enterButtonInSideBarXpath);
                 EnterButtonInSideBar.Click();
                 enterEsiaButton = driver.FindElementByXPath(enterEsiaButtonXpath);
-                enterEsiaButton.Click();
                 Exit = driver.FindElementByXPath(exitXpath);
                 Exit.Click();
              
