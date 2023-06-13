@@ -43,6 +43,9 @@ namespace Appium.Android
         public string passwordTextBoxEsiaXpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View[2]/android.view.View[2]/android.view.View/android.widget.EditText\r\n";
         public string enterXpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View[2]/android.view.View[3]/android.widget.Button\r\n";
         public string activateBiometriaWindowXpath = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.View/android.view.View/android.view.View\r\n";
+        public string activeBiometriaYesXpath = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.Button";
+        public string activeBiometriaNoXpath = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.widget.Button\r\n";
+        public string myOrdersXpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.widget.ScrollView/android.view.View[1]\r\n";
         public AndroidElement? mainEsiaButton;
         public AndroidElement? checkBoxPolicy;
         public AndroidElement? enterEsiaButton;
@@ -60,7 +63,9 @@ namespace Appium.Android
         public AndroidElement? PasswordTextBoxEsia;
         public AndroidElement? Enter;
         public AndroidElement? BiometriaWindow;
-
+        public AndroidElement? ActivBiometriaYesButton;
+        public AndroidElement? ActivBiometriaNoButton;
+        public AndroidElement? MyOrdersButton;
         public AndroidTestsInit() { }
 
         [SetUp]

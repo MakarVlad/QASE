@@ -148,5 +148,26 @@ namespace Appium.Android
                 Assert.Fail(ex.Message);
             }
         }
+        [Test]
+        [Order(4)]
+        public void EntranceEsiaWithoutBiometria()
+        {
+            case_id = 1157;
+            try
+            {
+                BiometriaWindow = driver.FindElementByXPath(activateBiometriaWindowXpath);
+                ActivBiometriaNoButton = driver.FindElementByXPath(activeBiometriaNoXpath);
+                ActivBiometriaNoButton.Click();
+                MyOrdersButton = driver.FindElementByXPath(myOrdersXpath);
+                QaseAPI.RunCaseResult(case_id, "passed", comment);
+            }
+            catch(Exception ex) 
+            {
+                QaseAPI.RunCaseResult(case_id, "failed", ex.Message);
+                Assert.Fail(ex.Message);
+            }
+
+
+        }
     }
 }
