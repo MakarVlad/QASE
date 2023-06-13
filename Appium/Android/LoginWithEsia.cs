@@ -46,6 +46,7 @@ namespace Appium.Android
         [Order(1)]
         public void LoginWithEsiaTestUser()
         {
+            case_id = 1136;
             try
             {
                 mainEsiaButton = driver.FindElementByXPath(mainEsiaButtonXpath);
@@ -62,7 +63,7 @@ namespace Appium.Android
                 PasswordTextBoxEsia.SendKeys("11111111");
                 Enter = driver.FindElementByXPath(enterXpath);
                 Enter.Click();
-                Thread.Sleep(2000);
+                Thread.Sleep(3000);
                 PinCodeKeyboard.PinCodeView = driver.FindElementByXPath(PinCodeKeyboard.PinCodeViewXpath);
                 QaseAPI.RunCaseResult(case_id, "passed", comment);
             }
@@ -76,6 +77,7 @@ namespace Appium.Android
         [Order(2)]
         public void EnterNotCorrectPinCode()
         {
+            case_id = 1155;
             try 
             {
                 for (int i = 0; i <= 1; i++)
@@ -107,7 +109,9 @@ namespace Appium.Android
                         PinCodeKeyboard.FiveButton.Click();
                     }
                 }
-
+                PinCodeKeyboard.BackPinCodeButton = driver.FindElementByXPath(PinCodeKeyboard.BackPinCodeXpath);
+                PinCodeKeyboard.BackPinCodeButton.Click();
+                QaseAPI.RunCaseResult(case_id, "passed", comment);
             }
             catch (Exception ex) 
             {
@@ -119,6 +123,7 @@ namespace Appium.Android
         [Order(3)]
         public void EnterCorrectPinCode()
         {
+            case_id = 1156;
             try
             {
                 for(int i = 0;i <= 1; i++)

@@ -69,7 +69,7 @@ namespace Appium.Android
         {
             AppiumOptions appiumOptions = new AppiumOptions();
             string appPath = Path.Combine(Environment.CurrentDirectory, "MSP_v.1.2.0.apk");
-            appiumOptions.AddAdditionalCapability(MobileCapabilityType.DeviceName, "4  WVGA (Nexus S)");
+            appiumOptions.AddAdditionalCapability(MobileCapabilityType.DeviceName, "Pixel 3");
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.PlatformName, "Android");
             appiumOptions.AddAdditionalCapability(MobileCapabilityType.PlatformVersion, "13.0");
 

@@ -20,6 +20,7 @@ namespace Appium.Android
         [Order(0)]
         public void GoToLoginMethodOnMainPage()
         {
+            case_id = 1137;
             try
             {
                 mainEsiaButton = driver.FindElementByXPath(mainEsiaButtonXpath);
@@ -42,6 +43,7 @@ namespace Appium.Android
         [Order(1)]
         public void GoToLoginMethodTapOnBell()
         {
+            case_id = 1139;
             try
             {
                 Bell = driver.FindElementByXPath(bellXpath);
@@ -68,6 +70,7 @@ namespace Appium.Android
         [Order(2)]
         public void GoToLoginMethodInSideBar()
         {
+            case_id = 1138;
             try
             {
                 UserIcon = driver.FindElementByXPath(userIconXpath);
